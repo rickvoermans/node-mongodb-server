@@ -15,3 +15,5 @@ module.exports = {
     env: env,
     dburl: dburl
 };
+
+// mongodb://<dbuser>:<dbpassword>@ds042527.mlab.com:42527/node-mongodb-server

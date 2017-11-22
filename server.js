@@ -41,8 +41,8 @@ app.use(bodyParser.json({
 // }));
 
 // configureer de app
-app.set('port', (process.env.PORT | config.env.webPort));
-app.set('env', (process.env.ENV | 'development'))
+app.set('port', (process.env.PORT || config.env.webPort));
+app.set('env', (process.env.ENV || 'development'))
 
 // wanneer je je settings wilt controleren
 // console.dir(config);
@@ -93,7 +93,7 @@ app.use('*', function (req, res) {
 
 // Installatie klaar; start de server.
 app.listen(config.env.webPort, function () {
-    console.log('De server luistert op port ' + app.get('port'));
+    console.log('De server luistert op port ' + app.get('port') + ' naar klasieke muziek');
     console.log('Zie bijvoorbeeld http://localhost:3000/api/v1/users');
 });
 
